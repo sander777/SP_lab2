@@ -80,9 +80,9 @@ public class Main {
 
     public static void main(String[] args) {
         try {
-            StateMachine a = new StateMachine(Files.readString(Path.of("state_machine.txt")));
-            System.out.println("Unreachable states: " + a.getUnreachableStates());
-            System.out.println("Dead ends: " + a.getDeadEnds());
+            StateMachine stateMachine = new StateMachine(Files.readString(Path.of("state_machine.txt")));
+            System.out.println("Unreachable states: " + stateMachine.getUnreachableStates());
+            System.out.println("Dead ends: " + stateMachine.getDeadEnds());
         } catch (IOException e) {
             e.printStackTrace();
         }
